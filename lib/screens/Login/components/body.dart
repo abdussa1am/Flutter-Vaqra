@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/components/form_screen.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -14,35 +15,46 @@ class Body extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           Container(
-            // height: size.height * 0.9,
+            height: size.height * 0.6,
             width: size.width,
             child: Image.asset(
-              "images/vaqra_login.png",
+              "assets/images/vaqra_login.png",
               fit: BoxFit.cover,
-              height: size.height * 0.6,
+              height: size.height * 1,
             ),
           ),
-          Text(
-            "Your Dream In Your hand",
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
+          Container(
+            alignment: Alignment(0, -0.5),
+            child: Image.asset(
+              "assets/images/Logo.png",
+              height: 60,
+              width: 90,
+            ),
+          ),
+          Container(
+            width: size.width * 0.9,
+            alignment: Alignment(0.4, -0.3),
+            child: Text(
+              "YOUR DREAM IN YOUR HAND",
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w700,
+                fontSize: 20,
+              ),
             ),
           ),
           Center(
             child: Container(
-              margin: EdgeInsets.only(top: 300),
-              height: size.height * 0.5,
+              margin: EdgeInsets.only(top: 250),
+              height: size.height * 0.55,
               width: size.width * 0.9,
-              // color: Colors.white,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(width: 1, color: Colors.white),
                   color: Colors.white),
               child: LoginForm(),
             ),
-          )
+          ),
         ],
       ),
     );
